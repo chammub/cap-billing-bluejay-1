@@ -1,0 +1,54 @@
+{
+  "name": "billing",
+  "version": "1.0.0",
+  "description": "billing application",
+  "main": "index.js",
+  "scripts": {
+    "genres": "cds serve test/genres.cds",
+    "start": "cds run",
+    "dev-watch": "set NODE_ENV=DEV&& cds watch",
+    "prod-watch": "set NODE_ENV=PROD&& cds watch"
+  },
+  "keywords": [
+    "cap",
+    "capm"
+  ],
+  "author": "chammu",
+  "private": true,
+  "license": "ISC",
+  "engines": {
+    "node": "^12.0.0 || ^14.0.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": "*"
+      },
+      "auth": {
+        "impl": "./auth/handler.js"
+      }
+    },
+    "log": {
+      "service": true
+    },
+    "features": {
+      "preserve_computed": true
+    }
+  },
+  "dependencies": {
+    "@sap/cds": "^5.3.1",
+    "@sap/cds-compiler": "^2.4.4",
+    "@sap/cds-dk": "^4.3.1",
+    "@sap/cds-foss": "^2.3.1",
+    "@sap/cds-runtime": "^3.1.2",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "cds-swagger-ui-express": "^0.2.0",
+    "sqlite3": "^5.0.2"
+  }
+}

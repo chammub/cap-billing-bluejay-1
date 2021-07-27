@@ -1,0 +1,5 @@
+code;name;descr
+PEND;Pending;Pending
+INPR;InProgress;InProgress
+COMP;Completed;Completed
+RETD;Returned;Returned

@@ -1,0 +1,7 @@
+{
+  "requires": {
+    "auth": {
+      "impl": "./auth/handler.js"
+    }
+  }
+}

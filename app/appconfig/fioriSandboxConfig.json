@@ -1,0 +1,182 @@
+{
+  "services": {
+    "LaunchPage": {
+      "adapter": {
+        "config": {
+          "groups": [
+            {
+              "id": "dashboard-group-id",
+              "title": "Sales Order",
+              "isPreset": true,
+              "isVisible": true,
+              "isGroupLocked": false,
+              "tiles": [
+                {
+                  "id": "orders-title-id",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "orders-chip-id",
+                    "title": "Sales Order",
+                    "subtitle": "Manage",
+                    "info": "Manage orders",
+                    "icon": "sap-icon://sales-order",
+                    "targetURL": "#Orders-manage"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "billing-group-id",
+              "title": "Billing",
+              "isPreset": true,
+              "isVisible": true,
+              "isGroupLocked": false,
+              "tiles": [
+                {
+                  "id": "billing-title-id",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "billing-chip-id",
+                    "title": "Billing",
+                    "subtitle": "Create",
+                    "info": "Create billing records",
+                    "icon": "sap-icon://monitor-payments",
+                    "targetURL": "#Billing-create"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "material-group-id",
+              "title": "Material Master",
+              "isPreset": true,
+              "isVisible": true,
+              "isGroupLocked": false,
+              "tiles": [
+                {
+                  "id": "category-title-id",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "category-chip-id",
+                    "title": "Category",
+                    "subtitle": "Manage",
+                    "info": "Manage categories",
+                    "icon": "sap-icon://product",
+                    "targetURL": "#Category-manage"
+                  }
+                },
+                {
+                  "id": "supplier-title-id",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "supplier-chip-id",
+                    "title": "Supplier",
+                    "subtitle": "Manage",
+                    "info": "Manage suppliers",
+                    "icon": "sap-icon://supplier",
+                    "targetURL": "#Supplier-manage"
+                  }
+                },
+                {
+                  "id": "products-title-id",
+                  "size": "1x1",
+                  "tileType": "sap.ushell.ui.tile.StaticTile",
+                  "properties": {
+                    "chipId": "products-chip-id",
+                    "title": "Products",
+                    "subtitle": "Manage",
+                    "info": "Manage Products",
+                    "icon": "sap-icon://add-product",
+                    "targetURL": "#Products-manage"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "NavTargetResolution": {
+      "config": {
+        "enableClientSideTargetResolution": true
+      }
+    },
+    "ClientSideTargetResolution": {
+      "adapter": {
+        "config": {
+          "inbounds": {
+            "Orders": {
+              "semanticObject": "Orders",
+              "action": "manage",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=sap.cap.orders",
+                "url": "/resources/Orders/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "Billing": {
+              "semanticObject": "Billing",
+              "action": "create",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=sap.cap.billing",
+                "url": "/resources/Billing/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "Category": {
+              "semanticObject": "Category",
+              "action": "manage",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=sap.cap.categories",
+                "url": "/resources/Category/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "Supplier": {
+              "semanticObject": "Supplier",
+              "action": "manage",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=sap.cap.supplier",
+                "url": "/resources/Supplier/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            },
+            "Products": {
+              "semanticObject": "Products",
+              "action": "manage",
+              "resolutionResult": {
+                "applicationType": "SAPUI5",
+                "additionalInformation": "SAPUI5.Component=sap.cap.products",
+                "url": "/resources/Products/webapp"
+              },
+              "signature": {
+                "parameters": {},
+                "additionalParameters": "allowed"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
