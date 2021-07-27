@@ -7,7 +7,7 @@
     "genres": "cds serve test/genres.cds",
     "start": "cds run",
     "dev-watch": "set NODE_ENV=DEV&& cds watch",
-    "prod-watch": "set NODE_ENV=PROD&& cds watch"
+    "prod-run": "set NODE_ENV=PROD&& cds run"
   },
   "keywords": [
     "cap",

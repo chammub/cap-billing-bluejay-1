@@ -112,9 +112,9 @@ module.exports = async (app) => {
   app.get(routes.LAUNCHPAD_HOME, isLoggedIn);
 
   // logged in user info
-  app.get(routes.AUTH_USER, (req, res) => {
-    res.json(req?.user?._json);
-  });
+  // app.get(routes.AUTH_USER, (req, res) => {
+  //   res.json(req?.user?._json);
+  // });
 
   /**
    * Google passport login & callback
