@@ -101,7 +101,7 @@ module.exports = async (app) => {
     }
   };
 
-  if (process.env.NODE_ENV === "PROD") {
+  if (process.env.NODE_ENV !== "DEV") {
     // home
     app.get(routes.HOME, isLoggedIn, (req, res) =>
       res.redirect(routes.LAUNCHPAD_HOME)

@@ -4,10 +4,8 @@
   "description": "billing application",
   "main": "index.js",
   "scripts": {
-    "genres": "cds serve test/genres.cds",
     "start": "cds run",
-    "dev-watch": "set NODE_ENV=DEV&& cds watch",
-    "prod-run": "set NODE_ENV=PROD&& cds run"
+    "dev-watch": "set NODE_ENV=DEV&& cds watch"
   },
   "keywords": [
     "cap",
